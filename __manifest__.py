@@ -1,71 +1,59 @@
-# -*- coding: utf-8 -*-
-#############################################################################
-#
-#    Cybrosys Technologies Pvt. Ltd.
-#
-#    Copyright (C) 2021-TODAY Cybrosys Technologies(<https://www.cybrosys.com>)
-#    Author: Cybrosys Techno Solutions(<https://www.cybrosys.com>)
-#
-#    You can modify it under the terms of the GNU LESSER
-#    GENERAL PUBLIC LICENSE (LGPL v3), Version 3.
-#
-#    This program is distributed in the hope that it will be useful,
-#    but WITHOUT ANY WARRANTY; without even the implied warranty of
-#    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-#    GNU LESSER GENERAL PUBLIC LICENSE (LGPL v3) for more details.
-#
-#    You should have received a copy of the GNU LESSER GENERAL PUBLIC LICENSE
-#    (LGPL v3) along with this program.
-#    If not, see <http://www.gnu.org/licenses/>.
-#
-#############################################################################
 {
-    'name': 'Theme Fuge',
-    'description': 'Theme Fuge is an attractive and modern eCommerce Website theme',
-    'summary': 'Design Web Pages with theme fuge',
-    'category': 'Theme/eCommerce',
-    'version': '15.0.1.0.0',
-    'author': 'Cybrosys Techno Solutions',
-    'company': 'Cybrosys Techno Solutions',
-    'maintainer': 'Cybrosys Techno Solutions',
-    'website': "https://www.cybrosys.com",
-    'depends': ['website', 'website_sale_wishlist', 'website_blog'],
+    'name': 'Anelusia Theme',
+    'description': 'Anelusia Fashion Theme',
+    'category': 'Theme/Retail',
+    'summary': 'Diversity, Fashions, Trends, Clothes, Shoes, Sports, Fitness, Stores',
+    'sequence': 180,
+    'version': '2.1.0',
+    'author': 'Odoo S.A.',
+    'depends': ['theme_common'],
     'data': [
-        'views/views.xml',
-        'views/shop_view.xml',
-        'views/shop_sidebar_view.xml',
-        'views/product_view.xml',
-        'views/blog.xml',
-        'views/popular_posts.xml',
-        'views/blog_details.xml',
-        'views/about.xml',
-        'views/contact.xml',
-        'views/header.xml',
-        'views/footer.xml',
-        'views/snippets/banner.xml',
-        'views/snippets/shop_with_us.xml',
-        'views/snippets/offer_men.xml',
-        'views/snippets/offer_women.xml',
-        'views/snippets/product_section.xml',
-        'views/snippets/latest_blogs.xml',
-        'views/snippets/customer_review.xml',
-        'views/snippets/subscribe.xml',
+        'data/ir_asset.xml',
+        'views/images_content.xml',
+        'views/images_library.xml',
+
+        'views/snippets/s_company_team.xml',
+        'views/snippets/s_cover.xml',
+        'views/snippets/s_image_gallery.xml',
+        'views/snippets/s_media_list.xml',
+        'views/snippets/s_banner.xml',
+        'views/snippets/s_color_blocks_2.xml',
+        'views/snippets/s_references.xml',
+        'views/snippets/s_call_to_action.xml',
+        'views/snippets/s_comparisons.xml',
+        'views/snippets/s_product_list.xml',
+        'views/snippets/s_product_catalog.xml',
+        'views/snippets/s_showcase.xml',
+        'views/snippets/s_text_image.xml',
+        'views/snippets/s_image_text.xml',
+        'views/snippets/s_numbers.xml',
+        'views/snippets/s_three_columns.xml',
+        'views/snippets/s_quotes_carousel.xml',
     ],
     'images': [
-        'static/description/banner.png',
-        'static/description/theme_screenshot.gif',
+        'static/description/anelusia_description.jpg',
+        'static/description/anelusia_screenshot.jpg',
     ],
-    'installable': True,
-    'application': True,
-    'auto_install': False,
-    'assets': {
-            'web.assets_frontend': [
-                'theme_fuge/static/src/css/style.css',
-                'theme_fuge/static/src/css/owl.carousel.min.css',
-                'theme_fuge/static/src/css/owl.theme.default.min.css',
-                'theme_fuge/static/src/js/product.js',
-                'theme_fuge/static/src/js/scroll_navbar.js',
-                ],
-            },
+    'images_preview_theme': {
+        'website.s_banner_default_image': '/theme_anelusia/static/src/img/snippets/s_banner.jpg',
+        'website.library_image_10': '/theme_anelusia/static/src/img/snippets/library_image_03.jpg',
+        'website.library_image_05': '/theme_anelusia/static/src/img/snippets/library_image_13.jpg',
+        'website.library_image_08': '/theme_anelusia/static/src/img/snippets/library_image_14.jpg',
+        'website.library_image_13': '/theme_anelusia/static/src/img/snippets/library_image_10.jpg',
+        'website.library_image_03': '/theme_anelusia/static/src/img/snippets/library_image_05.jpg',
+        'website.library_image_02': '/theme_anelusia/static/src/img/snippets/library_image_16.jpg',
+        'website.s_media_list_default_image_1': '/theme_anelusia/static/src/img/snippets/s_media_list_1.jpg',
+        'website.s_media_list_default_image_2': '/theme_anelusia/static/src/img/snippets/s_media_list_2.jpg',
+    },
+    'snippet_lists': {
+        'homepage': ['s_banner', 's_images_wall', 's_color_blocks_2', 's_references',
+                     's_media_list', 's_company_team', 's_call_to_action'],
+    },
     'license': 'LGPL-3',
+    'live_test_url': 'https://theme-anelusia.odoo.com',
+    'assets': {
+        'website.assets_editor': [
+            'theme_anelusia/static/src/js/tour.js',
+        ],
+    }
 }
